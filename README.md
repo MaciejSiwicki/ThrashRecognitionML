@@ -9,7 +9,7 @@
 
 ### Krok 2: Budowa Modelu Uczenia Maszynowego
 
--   **Model ML**: Zbudowanie modelu klasyfikacji odpadów opartego na konwolucyjnych sieciach neuronowych (CNN). Wykorzystywanie narzędzi takich jak TensorFlow lub PyTorch do stworzenia i trenowania modelu.
+-   **Model ML**: Zbudowanie modelu klasyfikacji odpadów opartego na klasycznych oraz konwolucyjnych sieciach neuronowych (CNN). Wykorzystywanie narzędzi takich jak TensorFlow lub PyTorch do stworzenia i trenowania modelu.
 -   **Ocena Modelu**: Po nauczeniu modelu, ocena jego wydajności na zbiorze testowym, sprawdzanie dokładności klasyfikacji.
 
 ### Krok 3: Implementacja Prostego Interfejsu Graficznego
