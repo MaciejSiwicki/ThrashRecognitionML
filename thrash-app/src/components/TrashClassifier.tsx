@@ -13,7 +13,7 @@ const TrashClassifier: React.FC<TrashClassifierProps> = ({ image }) => {
 	useEffect(() => {
 		const loadModel = async () => {
 			const loadedModel = await tf.loadLayersModel(
-				"/tfjs_model/model.json"
+				"../../../model/model.json"
 			);
 			setModel(loadedModel);
 		};

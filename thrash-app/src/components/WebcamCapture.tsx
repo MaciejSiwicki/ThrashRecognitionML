@@ -26,8 +26,8 @@ const WebcamCapture: React.FC<WebcamCaptureProps> = ({ onCapture }) => {
 				ref={webcamRef}
 				screenshotFormat="image/jpeg"
 				className="border rounded"
-				width={640}
-				height={480}
+				width={320}
+				height={240}
 			/>
 			<div className="mt-4 flex space-x-2">
 				<Button
