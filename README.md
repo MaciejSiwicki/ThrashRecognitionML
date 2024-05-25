@@ -16,4 +16,12 @@
 
 -   **Interfejs Graficzny**: Implementacja prostego interfejsu graficznego, który będzie umożliwiał użytkownikowi korzystanie z kamery do robienia zdjęć. Wynik klasyfikacji będzie wyświetlany w interfejsie.
 
-![Example photos](./README/trashnet_example.png)
+![Example photos](./trashnet_example.png)
+
+## Włączenie aplikacji
+
+```bash
+cd thrash-app
+npm i
+npm run dev
+```
