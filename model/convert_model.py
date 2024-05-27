@@ -5,4 +5,4 @@ import tensorflowjs as tfjs
 model = tf.keras.models.load_model("ThrashRecognitionML.v1.ipynb.keras")
 
 # Save the model in TensorFlow.js format
-tfjs.converters.save_keras_model(model, "path_to_save_tfjs_model")
+tfjs.converters.save_keras_model(model, "./tfjs_model/")

@@ -12,9 +12,7 @@ const TrashClassifier: React.FC<TrashClassifierProps> = ({ image }) => {
 
 	useEffect(() => {
 		const loadModel = async () => {
-			const loadedModel = await tf.loadLayersModel(
-				"../../../model/model.json"
-			);
+			const loadedModel = await tf.loadLayersModel("/model.json");
 			setModel(loadedModel);
 		};
 		loadModel();
@@ -28,21 +26,23 @@ const TrashClassifier: React.FC<TrashClassifierProps> = ({ image }) => {
 				img.onload = () => {
 					const tensor = tf.browser
 						.fromPixels(img)
-						.resizeNearestNeighbor([224, 224])
+						.resizeNearestNeighbor([48, 48]) // Resize to 48x48
 						.toFloat()
 						.expandDims();
 					const predictions = model.predict(tensor) as tf.Tensor;
 					const classNames = [
-						"plastic",
-						"paper",
-						"glass",
-						"other",
 						"cardboard",
+						"glass",
+						"metal",
+						"other",
+						"paper",
+						"plastic",
 					];
 					const predictedIndex = predictions.argMax(-1).dataSync()[0];
 					setPrediction(classNames[predictedIndex]);
 				};
 			};
+
 			classifyImage();
 		}
 	}, [model, image]);
